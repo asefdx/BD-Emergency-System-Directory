@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BD Emergency Service Directory</title>
+
     <!-- tailwind and daisyui cdn-->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -11,6 +12,7 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <!-- font awesome cdn -->
     <link
       rel="stylesheet"
@@ -36,19 +38,27 @@
 
         <!-- Right Buttons -->
         <div class="flex flex-wrap items-center gap-3 mr-3">
+          <!-- Hearts -->
           <div
             class="flex gap-2 items-center px-3 py-1 rounded-xl shadow bg-zinc-100"
           >
-            <h3>0</h3>
+            <h3 id="heart-number">0</h3>
             <img src="./assets/heart.png" class="w-[25px]" alt="heart" />
           </div>
+          <!-- Coins -->
           <div
             class="flex gap-2 items-center px-3 py-1 rounded-xl shadow bg-zinc-100"
           >
-            <h3>100</h3>
+            <h3 id="coin-number">100</h3>
             <img src="./assets/coin.png" class="w-[25px]" alt="coin" />
           </div>
-          <button class="btn btn-success rounded-2xl px-5">2 copy</button>
+          <!-- Copy Count -->
+          <div
+            class="flex gap-2 items-center px-3 py-1 rounded-2xl shadow bg-green-900"
+          >
+            <span class="font-semibold">Copy:</span>
+            <span id="copy-number">0</span>
+          </div>
         </div>
       </nav>
 
@@ -81,27 +91,44 @@
             <div class="card-1 bg-[#0002031a] shadow-lg rounded-xl">
               <div class="icon-prnt flex justify-between items-center pl-4">
                 <img src="./assets/emergency.png" class="w-[40px]" alt="" />
-                <i class="fa-regular fa-heart"></i>
+                <i
+                  id="heart-btn1"
+                  class="fa-regular fa-heart cursor-pointer"
+                ></i>
               </div>
               <div class="mid-2 mt-4 pl-4">
-                <h3 class="text-xl md:text-2xl font-bold">
+                <h3
+                  id="national-emergency-number"
+                  class="text-xl md:text-2xl font-bold"
+                >
                   National Emergency Number
                 </h3>
                 <p class="text-gray-500 text-sm md:text-base">
                   National Emergency
                 </p>
                 <div class="mt-5">
-                  <h2 class="text-2xl md:text-3xl font-bold">999</h2>
+                  <h2
+                    id="national-emergency-number-call"
+                    class="text-2xl md:text-3xl font-bold"
+                  >
+                    999
+                  </h2>
                   <p class="rounded-sm bg-slate-300 w-[50px] text-center">
                     All
                   </p>
                 </div>
               </div>
               <div class="btn-prnt flex items-center gap-1 py-7 pl-4">
-                <button class="btn btn-sm bg-[#89928d] border-none text-white">
+                <button
+                  id="copy-btn1"
+                  class="btn btn-sm bg-[#89928d] border-none text-white"
+                >
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
-                <button class="btn btn-sm bg-green-950 border-none text-white">
+                <button
+                  id="call-btn1"
+                  class="btn btn-sm bg-green-950 border-none text-white"
+                >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
               </div>
@@ -111,25 +138,42 @@
             <div class="card-1 bg-[#0002031a] shadow-lg rounded-xl">
               <div class="icon-prnt flex justify-between items-center pl-4">
                 <img src="./assets/police.png" class="w-[40px]" alt="" />
-                <i class="fa-regular fa-heart"></i>
+                <i
+                  id="heart-btn2"
+                  class="fa-regular fa-heart cursor-pointer"
+                ></i>
               </div>
               <div class="mid-2 mt-4 pl-4">
-                <h3 class="text-xl md:text-2xl font-bold">
+                <h3
+                  id="police-helpline-number"
+                  class="text-xl md:text-2xl font-bold"
+                >
                   Emergency Police Helpline Number
                 </h3>
                 <p class="text-gray-500 text-sm md:text-base">Police</p>
                 <div class="mt-5">
-                  <h2 class="text-2xl md:text-3xl font-bold">999</h2>
+                  <h2
+                    id="police-helpline-number-call"
+                    class="text-2xl md:text-3xl font-bold"
+                  >
+                    999
+                  </h2>
                   <p class="rounded-sm bg-slate-300 w-[60px] text-center">
                     Police
                   </p>
                 </div>
               </div>
               <div class="btn-prnt flex items-center gap-1 py-7 pl-4">
-                <button class="btn btn-sm bg-[#89928d] border-none text-white">
+                <button
+                  id="copy-btn2"
+                  class="btn btn-sm bg-[#89928d] border-none text-white"
+                >
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
-                <button class="btn btn-sm bg-green-950 border-none text-white">
+                <button
+                  id="call-btn2"
+                  class="btn btn-sm bg-green-950 border-none text-white"
+                >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
               </div>
@@ -139,25 +183,42 @@
             <div class="card-1 bg-[#0002031a] shadow-lg rounded-xl">
               <div class="icon-prnt flex justify-between items-center pl-4">
                 <img src="./assets/fire-service.png" class="w-[40px]" alt="" />
-                <i class="fa-regular fa-heart"></i>
+                <i
+                  id="heart-btn3"
+                  class="fa-regular fa-heart cursor-pointer"
+                ></i>
               </div>
               <div class="mid-2 mt-4 pl-4">
-                <h3 class="text-xl md:text-2xl font-bold">
+                <h3
+                  id="fire-service-number"
+                  class="text-xl md:text-2xl font-bold"
+                >
                   Emergency Fire Service Number
                 </h3>
                 <p class="text-gray-500 text-sm md:text-base">Fire Service</p>
                 <div class="mt-5">
-                  <h2 class="text-2xl md:text-3xl font-bold">999</h2>
+                  <h2
+                    id="fire-service-number-call"
+                    class="text-2xl md:text-3xl font-bold"
+                  >
+                    999
+                  </h2>
                   <p class="rounded-sm bg-slate-300 w-[50px] text-center">
                     Fire
                   </p>
                 </div>
               </div>
               <div class="btn-prnt flex items-center gap-1 py-7 pl-4">
-                <button class="btn btn-sm bg-[#89928d] border-none text-white">
+                <button
+                  id="copy-btn3"
+                  class="btn btn-sm bg-[#89928d] border-none text-white"
+                >
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
-                <button class="btn btn-sm bg-green-950 border-none text-white">
+                <button
+                  id="call-btn3"
+                  class="btn btn-sm bg-green-950 border-none text-white"
+                >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
               </div>
@@ -167,23 +228,42 @@
             <div class="card-1 bg-[#0002031a] shadow-lg rounded-xl">
               <div class="icon-prnt flex justify-between items-center pl-4">
                 <img src="./assets/ambulance.png" class="w-[40px]" alt="" />
-                <i class="fa-regular fa-heart"></i>
+                <i
+                  id="heart-btn4"
+                  class="fa-regular fa-heart cursor-pointer"
+                ></i>
               </div>
               <div class="mid-2 mt-4 pl-4">
-                <h3 class="text-xl md:text-2xl font-bold">Service</h3>
+                <h3
+                  id="ambulance-service"
+                  class="text-xl md:text-2xl font-bold"
+                >
+                  Service
+                </h3>
                 <p class="text-gray-500 text-sm md:text-base">Ambulance</p>
                 <div class="mt-5">
-                  <h2 class="text-xl md:text-2xl font-bold">0171883456</h2>
+                  <h2
+                    id="ambulance-service-call"
+                    class="text-xl md:text-2xl font-bold"
+                  >
+                    0171883456
+                  </h2>
                   <p class="rounded-sm bg-slate-300 w-[60px] text-center">
                     Health
                   </p>
                 </div>
               </div>
               <div class="btn-prnt flex items-center gap-1 py-7 pl-4">
-                <button class="btn btn-sm bg-[#89928d] border-none text-white">
+                <button
+                  id="copy-btn4"
+                  class="btn btn-sm bg-[#89928d] border-none text-white"
+                >
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
-                <button class="btn btn-sm bg-green-950 border-none text-white">
+                <button
+                  id="call-btn4"
+                  class="btn btn-sm bg-green-950 border-none text-white"
+                >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
               </div>
@@ -193,25 +273,42 @@
             <div class="card-1 bg-[#0002031a] shadow-lg rounded-xl">
               <div class="icon-prnt flex justify-between items-center pl-4">
                 <img src="./assets/emergency.png" class="w-[40px]" alt="" />
-                <i class="fa-regular fa-heart"></i>
+                <i
+                  id="heart-btn5"
+                  class="fa-regular fa-heart cursor-pointer"
+                ></i>
               </div>
               <div class="mid-2 mt-4 pl-4">
-                <h3 class="text-xl md:text-2xl font-bold">
+                <h3
+                  id="women&child-helpline"
+                  class="text-xl md:text-2xl font-bold"
+                >
                   Women & Child Helpline
                 </h3>
                 <p class="text-gray-500 text-sm md:text-base">Women & Child</p>
                 <div class="mt-5">
-                  <h2 class="text-2xl md:text-3xl font-bold">109</h2>
+                  <h2
+                    id="women&child-helpline-call"
+                    class="text-2xl md:text-3xl font-bold"
+                  >
+                    109
+                  </h2>
                   <p class="rounded-sm bg-slate-300 w-[50px] text-center">
                     Help
                   </p>
                 </div>
               </div>
               <div class="btn-prnt flex items-center gap-1 py-7 pl-4">
-                <button class="btn btn-sm bg-[#89928d] border-none text-white">
+                <button
+                  id="copy-btn5"
+                  class="btn btn-sm bg-[#89928d] border-none text-white"
+                >
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
-                <button class="btn btn-sm bg-green-950 border-none text-white">
+                <button
+                  id="call-btn5"
+                  class="btn btn-sm bg-green-950 border-none text-white"
+                >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
               </div>
@@ -221,27 +318,44 @@
             <div class="card-1 bg-[#0002031a] shadow-lg rounded-xl">
               <div class="icon-prnt flex justify-between items-center pl-4">
                 <img src="./assets/emergency.png" class="w-[40px]" alt="" />
-                <i class="fa-regular fa-heart"></i>
+                <i
+                  id="heart-btn6"
+                  class="fa-regular fa-heart cursor-pointer"
+                ></i>
               </div>
               <div class="mid-2 mt-4 pl-4">
-                <h3 class="text-xl md:text-2xl font-bold">
+                <h3
+                  id="anti-corruption-helpline"
+                  class="text-xl md:text-2xl font-bold"
+                >
                   Anti Corruption Helpline
                 </h3>
                 <p class="text-gray-500 text-sm md:text-base">
                   Anti Corruption
                 </p>
                 <div class="mt-5">
-                  <h2 class="text-2xl md:text-3xl font-bold">106</h2>
+                  <h2
+                    id="anti-corruption-helpline-call"
+                    class="text-2xl md:text-3xl font-bold"
+                  >
+                    106
+                  </h2>
                   <p class="rounded-sm bg-slate-300 w-[50px] text-center">
                     Govt
                   </p>
                 </div>
               </div>
               <div class="btn-prnt flex items-center gap-1 py-7 pl-4">
-                <button class="btn btn-sm bg-[#89928d] border-none text-white">
+                <button
+                  id="copy-btn6"
+                  class="btn btn-sm bg-[#89928d] border-none text-white"
+                >
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
-                <button class="btn btn-sm bg-green-950 border-none text-white">
+                <button
+                  id="call-btn6"
+                  class="btn btn-sm bg-green-950 border-none text-white"
+                >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
               </div>
@@ -251,27 +365,44 @@
             <div class="card-1 bg-[#0002031a] shadow-lg rounded-xl">
               <div class="icon-prnt flex justify-between items-center pl-4">
                 <img src="./assets/emergency.png" class="w-[40px]" alt="" />
-                <i class="fa-regular fa-heart"></i>
+                <i
+                  id="heart-btn7"
+                  class="fa-regular fa-heart cursor-pointer"
+                ></i>
               </div>
               <div class="mid-2 mt-4 pl-4">
-                <h3 class="text-xl md:text-2xl font-bold">
+                <h3
+                  id="electricity-helpline"
+                  class="text-xl md:text-2xl font-bold"
+                >
                   Emergency Electricity Helpline
                 </h3>
                 <p class="text-gray-500 text-sm md:text-base">
                   Electricity Outage
                 </p>
                 <div class="mt-5">
-                  <h2 class="text-2xl md:text-3xl font-bold">16216</h2>
+                  <h2
+                    id="electricity-helpline-call"
+                    class="text-2xl md:text-3xl font-bold"
+                  >
+                    16216
+                  </h2>
                   <p class="rounded-sm bg-slate-300 w-[60px] text-center">
                     Electric
                   </p>
                 </div>
               </div>
               <div class="btn-prnt flex items-center gap-1 py-7 pl-4">
-                <button class="btn btn-sm bg-[#89928d] border-none text-white">
+                <button
+                  id="copy-btn7"
+                  class="btn btn-sm bg-[#89928d] border-none text-white"
+                >
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
-                <button class="btn btn-sm bg-green-950 border-none text-white">
+                <button
+                  id="call-btn7"
+                  class="btn btn-sm bg-green-950 border-none text-white"
+                >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
               </div>
@@ -281,25 +412,39 @@
             <div class="card-1 bg-[#0002031a] shadow-lg rounded-xl">
               <div class="icon-prnt flex justify-between items-center pl-4">
                 <img src="./assets/emergency.png" class="w-[40px]" alt="" />
-                <i class="fa-regular fa-heart"></i>
+                <i
+                  id="heart-btn8"
+                  class="fa-regular fa-heart cursor-pointer"
+                ></i>
               </div>
               <div class="mid-2 mt-4 pl-4">
-                <h3 class="text-xl md:text-2xl font-bold">
+                <h3 id="brac-helpline" class="text-xl md:text-2xl font-bold">
                   Emergency Brac <br />Helpline
                 </h3>
                 <p class="text-gray-500 text-sm md:text-base">Brac</p>
                 <div class="mt-5">
-                  <h2 class="text-2xl md:text-3xl font-bold">16445</h2>
+                  <h2
+                    id="brac-helpline-call"
+                    class="text-2xl md:text-3xl font-bold"
+                  >
+                    16445
+                  </h2>
                   <p class="rounded-sm bg-slate-300 w-[50px] text-center">
                     NGO
                   </p>
                 </div>
               </div>
               <div class="btn-prnt flex items-center gap-1 py-7 pl-4">
-                <button class="btn btn-sm bg-[#89928d] border-none text-white">
+                <button
+                  id="copy-btn8"
+                  class="btn btn-sm bg-[#89928d] border-none text-white"
+                >
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
-                <button class="btn btn-sm bg-green-950 border-none text-white">
+                <button
+                  id="call-btn8"
+                  class="btn btn-sm bg-green-950 border-none text-white"
+                >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
               </div>
@@ -309,27 +454,44 @@
             <div class="card-1 bg-[#0002031a] shadow-lg rounded-xl">
               <div class="icon-prnt flex justify-between items-center pl-4">
                 <img src="./assets/emergency.png" class="w-[40px]" alt="" />
-                <i class="fa-regular fa-heart"></i>
+                <i
+                  id="heart-btn9"
+                  class="fa-regular fa-heart cursor-pointer"
+                ></i>
               </div>
               <div class="mid-2 mt-4 pl-4">
-                <h3 class="text-xl md:text-2xl font-bold">
+                <h3
+                  id="bangladesh-railway-helpline"
+                  class="text-xl md:text-2xl font-bold"
+                >
                   Bangladesh Railway Helpline
                 </h3>
                 <p class="text-gray-500 text-sm md:text-base">
                   Bangladesh Railway
                 </p>
                 <div class="mt-5">
-                  <h2 class="text-2xl md:text-3xl font-bold">163</h2>
+                  <h2
+                    id="bangladesh-railway-helpline-call"
+                    class="text-2xl md:text-3xl font-bold"
+                  >
+                    163
+                  </h2>
                   <p class="rounded-sm bg-slate-300 w-[60px] text-center">
                     Travel
                   </p>
                 </div>
               </div>
               <div class="btn-prnt flex items-center gap-1 py-7 pl-4">
-                <button class="btn btn-sm bg-[#89928d] border-none text-white">
+                <button
+                  id="copy-btn9"
+                  class="btn btn-sm bg-[#89928d] border-none text-white"
+                >
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
-                <button class="btn btn-sm bg-green-950 border-none text-white">
+                <button
+                  id="call-btn9"
+                  class="btn btn-sm bg-green-950 border-none text-white"
+                >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
               </div>
@@ -345,10 +507,18 @@
             <h2 class="font-bold">
               <i class="fa-solid fa-clock"></i> Call History
             </h2>
-            <button class="btn btn-success rounded-2xl px-5">Clear</button>
+            <button id="clear-btn" class="btn btn-success rounded-2xl px-5">
+              Clear
+            </button>
+          </div>
+          <div id="call-history-container" class="p-3 space-y-3">
+            <!-- History items will be injected here -->
           </div>
         </aside>
       </section>
     </main>
+
+    <!-- JS -->
+    <script src="./script/index.js"></script>
   </body>
 </html>
